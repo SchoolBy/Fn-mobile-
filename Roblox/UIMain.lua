@@ -16,9 +16,9 @@ StarterGui:SetCore("SendNotification", {
 
 
 --* Application Details *--
-Name = "" --* Application Name
-Ownerid = "" --* OwnerID
-APPVersion = "1.0"     --* Application Version
+Name = "OshRoblox" --* Application Name
+Ownerid = "BcDdohqQ4A" --* OwnerID
+APPVersion = "1.0" --* Application Version
 
 local req = game:HttpGet('https://keyauth.win/api/1.1/?name=' .. Name .. '&ownerid=' .. Ownerid .. '&type=init&ver=' .. APPVersion)
 
@@ -44,7 +44,7 @@ elseif (data.message == "invalidver") then
    print(" Error: Wrong application version..")
 
    StarterGui:SetCore("SendNotification", {
-	   Title = LuaName,
+	   Title = Osh Hub,
 	   Text = " Error: Wrong application version..",
 	   Duration = 3
    })
@@ -87,7 +87,7 @@ end)
 MainSection:NewButton("Login to Application ?", "Please provide Password.", function(state)
     if Username == "" then
         StarterGui:SetCore("SendNotification", {
-            Title = LuaName,
+            Title = Osh Hub,
             Text = " Error: Username is empty.",
             Duration = 3
         })
@@ -95,7 +95,7 @@ MainSection:NewButton("Login to Application ?", "Please provide Password.", func
     end
     if Password == "" then
         StarterGui:SetCore("SendNotification", {
-            Title = LuaName,
+            Title = Osh Hub,
             Text = " Error: Password is empty.",
             Duration = 3
         })
@@ -112,7 +112,7 @@ MainSection:NewButton("Login to Application ?", "Please provide Password.", func
         print(" Error: " .. data.message )
     
        StarterGui:SetCore("SendNotification", {
-           Title = LuaName,
+           Title = Osh Hub,
            Text = " Error: " .. data.message,
            Duration = 5
        })
@@ -121,7 +121,7 @@ MainSection:NewButton("Login to Application ?", "Please provide Password.", func
     end
     
     StarterGui:SetCore("SendNotification", {
-        Title = LuaName,
+        Title = Osh Hub,
         Text = " Successfully Authorized :)",
         Duration = 5
     })
